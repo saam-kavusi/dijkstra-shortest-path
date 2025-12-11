@@ -18,21 +18,21 @@ bool validate_cli_or_exit(int argc, char** argv)
 
     if (argc != 4) // checks command line
     {
-        fprintf(stderr, "Usage: ./PJ3 <InputFile> <GraphType> <Flag>\n");
+        fprintf(stderr, "Usage: ./dijkstra <InputFile> <GraphType> <Flag>\n");
         return false;
     }
 
     graphType = argv[2]; // check graph type
     if (!(graphType && (strcmp(graphType, "DirectedGraph") == 0 || strcmp(graphType, "UndirectedGraph") == 0)))
     {
-        fprintf(stderr, "Usage: ./PJ3 <InputFile> <GraphType> <Flag>\n");
+        fprintf(stderr, "Usage: ./dijkstra <InputFile> <GraphType> <Flag>\n");
         return false;
     }
 
     flag = argv[3]; // check flag
     if (!(flag && (strcmp(flag, "0") == 0 || strcmp(flag, "1") == 0)))
     {
-        fprintf(stderr, "Usage: ./PJ3 <InputFile> <GraphType> <Flag>\n");
+        fprintf(stderr, "Usage: ./dijkstra <InputFile> <GraphType> <Flag>\n");
         return false;
     }
 
